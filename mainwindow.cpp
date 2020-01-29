@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     QCameraViewfinder* viewfinder = new QCameraViewfinder();
     viewfinder->show();
     camera->setViewfinder(viewfinder);
-    camera->setCaptureMode(QCamera::CaptureStillImage);
+    connect(camera, )
     camera->start();
 }
 

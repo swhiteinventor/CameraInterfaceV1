@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1198</width>
-    <height>845</height>
+    <width>880</width>
+    <height>670</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,27 +17,180 @@
    <widget class="QStackedWidget" name="stackedWidget">
     <property name="geometry">
      <rect>
-      <x>250</x>
-      <y>130</y>
-      <width>491</width>
-      <height>361</height>
+      <x>0</x>
+      <y>200</y>
+      <width>441</width>
+      <height>331</height>
      </rect>
     </property>
     <widget class="QCameraViewfinder" name="cameraHead"/>
     <widget class="QCameraViewfinder" name="cameraArm"/>
    </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>881</width>
+      <height>157</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="4" column="9" rowspan="2">
+      <widget class="QPushButton" name="ManContr_TiltUpButton">
+       <property name="text">
+        <string>Tilt Up</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="7" colspan="2">
+      <widget class="QPushButton" name="Follow_PauseButton">
+       <property name="text">
+        <string>Pause</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="4" colspan="3">
+      <widget class="QPushButton" name="SetPoint_SaveViewButton">
+       <property name="text">
+        <string>Save View</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="10">
+      <widget class="QPushButton" name="ManContr_PanLeftButton">
+       <property name="text">
+        <string>Pan Left</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="3" colspan="3">
+      <widget class="QPushButton" name="ManContr_UpButton">
+       <property name="text">
+        <string>Up</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="8">
+      <widget class="QPushButton" name="Follow_ResetButton">
+       <property name="text">
+        <string>Reset</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QPushButton" name="ManContr_WorldFrameButton">
+       <property name="text">
+        <string>World Frame</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="9" rowspan="2">
+      <widget class="QPushButton" name="ManContr_RollRightButton">
+       <property name="text">
+        <string>Roll Right</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="5" rowspan="2">
+      <widget class="QPushButton" name="ManContr_RightButton">
+       <property name="text">
+        <string>Right</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="7">
+      <widget class="QPushButton" name="Follow_PlayButton">
+       <property name="text">
+        <string>Play</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0" rowspan="2">
+      <widget class="QPushButton" name="SetPoint_HomeButton">
+       <property name="text">
+        <string>Home</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1" colspan="4">
+      <widget class="QPushButton" name="SetPoint_SideViewButton">
+       <property name="text">
+        <string>Side View</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="10" rowspan="2">
+      <widget class="QPushButton" name="ManContr_TiltDownButton">
+       <property name="text">
+        <string>Tilt Down</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1" colspan="3">
+      <widget class="QPushButton" name="SetPoint_TopViewButton">
+       <property name="text">
+        <string>Top View</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="9">
+      <widget class="QPushButton" name="ManContr_PanRightButton">
+       <property name="text">
+        <string>Pan Right</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="10" rowspan="2">
+      <widget class="QPushButton" name="ManContr_RollLeftButton">
+       <property name="text">
+        <string>Roll Left</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="3" colspan="3">
+      <widget class="QPushButton" name="ManContr_DownButton">
+       <property name="text">
+        <string>Down</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QPushButton" name="ManContr_CamFrameButton">
+       <property name="text">
+        <string>Camera Frame</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="3">
+      <widget class="QPushButton" name="ManContr_LeftButton">
+       <property name="text">
+        <string>Left</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="7">
+      <widget class="QPushButton" name="ManContr_InButton">
+       <property name="text">
+        <string>In</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="7">
+      <widget class="QPushButton" name="ManContr_OutButton_2">
+       <property name="text">
+        <string>out</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>1198</width>
-     <height>22</height>
-    </rect>
+  <action name="actionMenu">
+   <property name="text">
+    <string>Menu</string>
    </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  </action>
  </widget>
  <customwidgets>
   <customwidget>
