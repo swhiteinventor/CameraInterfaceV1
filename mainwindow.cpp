@@ -9,17 +9,33 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    bool haveCameras = checkCameraAvailability();
+    if (haveCameras)
+    {
+        const QList<QCameraInfo> availableCameras = QCameraInfo::availableCameras();
+        QListIterator<QCameraInfo> i(availableCameras);
+        QCamera* cameraHead = new QCamera(i.next());
+        cameraHead->setViewfinder(ui->viewfinderHead);
+        cameraHead->start();
+        QCamera* cameraArm = new QCamera(i.next());
+        cameraArm->setViewfinder(ui->viewfinderArm);
+        cameraArm->start();
 
-    QCamera* camera = new QCamera;
-    QCameraViewfinder* viewfinder = new QCameraViewfinder();
-    viewfinder->show();
-    camera->setViewfinder(viewfinder);
-    connect(camera, )
-    camera->start();
-}
+
+        //camera->start();
+
+    }
+    }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
 
+bool MainWindow::checkCameraAvailability()
+{
+    if (QCameraInfo::availableCameras().count() > 1)
+        return true;
+    else
+        return false;
+}

@@ -14,19 +14,7 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QStackedWidget" name="stackedWidget">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>200</y>
-      <width>441</width>
-      <height>331</height>
-     </rect>
-    </property>
-    <widget class="QCameraViewfinder" name="cameraHead"/>
-    <widget class="QCameraViewfinder" name="cameraArm"/>
-   </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -184,6 +172,25 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QSplitter" name="splitter">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>861</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+    <widget class="QStackedWidget" name="stackedWidget">
+     <widget class="QCameraViewfinder" name="viewfinderHead"/>
+    </widget>
+    <widget class="QStackedWidget" name="stackedWidget_2">
+     <widget class="QCameraViewfinder" name="viewfinderArm"/>
+    </widget>
    </widget>
   </widget>
   <action name="actionMenu">

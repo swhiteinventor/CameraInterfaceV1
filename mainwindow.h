@@ -17,5 +17,6 @@ public:
 
 private:
     Ui::MainWindow *ui;
+    bool checkCameraAvailability();
 };
 #endif // MAINWINDOW_H
