@@ -17,39 +17,6 @@
    <string notr="true">background-color: rgb(40,40,40)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QStackedWidget" name="stackedWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>70</y>
-      <width>960</width>
-      <height>540</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>640</width>
-      <height>360</height>
-     </size>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::NoFocus</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: black</string>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <widget class="QCameraViewfinder" name="viewfinderHead"/>
-    <widget class="QCameraViewfinder" name="viewfinderArm"/>
-   </widget>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
@@ -175,6 +142,80 @@
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>219</y>
+      <width>561</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <widget class="QCameraViewfinder" name="viewfinderHead"/>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>499</x>
+      <y>130</y>
+      <width>391</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <widget class="QCameraViewfinder" name="viewfinderArm"/>
+   </widget>
+   <widget class="QGraphicsView" name="graphicsView">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>901</width>
+      <height>311</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>570</x>
+      <y>230</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>190</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>480</y>
+      <width>67</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
    </widget>
   </widget>
   <action name="actionMenu">
