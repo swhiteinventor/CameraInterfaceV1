@@ -28,7 +28,12 @@
   <property name="styleSheet">
    <string notr="true">background-color: rgb(40,40,40);
 color: lightgrey;
-border-color: darkgrey;
+QPushButton{
+border: 1px solid red;
+    border-radius: 2px;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                      stop: 0 rgb(72,72,72), stop: 1 #dadbde);
+}
 statusBar{
 background-color: grey;
 }

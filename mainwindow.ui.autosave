@@ -6,62 +6,53 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>980</width>
-    <height>620</height>
+    <width>960</width>
+    <height>780</height>
    </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>780</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>780</height>
+   </size>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(40,40,40)</string>
+   <string notr="true">background-color: rgb(40,40,40);
+color: white;
+QPushButton{
+border: 1px solid blue;
+border-radius: 2px;
+background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,stop: 0 white, stop: 1 black);
+}
+
+statusBar{
+background-color: grey;
+}
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QStackedWidget" name="stackedWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>70</y>
-      <width>960</width>
-      <height>540</height>
-     </rect>
-    </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-      <horstretch>0</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
-    <property name="minimumSize">
-     <size>
-      <width>640</width>
-      <height>360</height>
-     </size>
-    </property>
-    <property name="focusPolicy">
-     <enum>Qt::NoFocus</enum>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: black</string>
-    </property>
-    <property name="currentIndex">
-     <number>1</number>
-    </property>
-    <widget class="QCameraViewfinder" name="viewfinderHead"/>
-    <widget class="QCameraViewfinder" name="viewfinderArm"/>
-   </widget>
    <widget class="QWidget" name="gridLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>20</y>
-      <width>961</width>
+      <width>913</width>
       <height>41</height>
      </rect>
     </property>
     <layout class="QGridLayout" name="gridLayout">
-     <item row="0" column="2">
-      <widget class="QPushButton" name="SetPoint_SideViewButton">
+     <item row="0" column="3">
+      <widget class="QPushButton" name="SetPoint_SaveViewButton">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
          <horstretch>0</horstretch>
@@ -74,12 +65,27 @@
          <height>25</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(72,72,72);
-color: white;</string>
+       <property name="text">
+        <string>Save View</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="SetPoint_HomeButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>125</width>
+         <height>25</height>
+        </size>
        </property>
        <property name="text">
-        <string>Side View</string>
+        <string>Home</string>
        </property>
       </widget>
      </item>
@@ -96,9 +102,6 @@ color: white;</string>
          <width>125</width>
          <height>25</height>
         </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(72,72,72)</string>
        </property>
        <property name="text">
         <string>Play</string>
@@ -119,60 +122,8 @@ color: white;</string>
          <height>25</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(72,72,72);
-color: white;</string>
-       </property>
        <property name="text">
         <string>Top View</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QPushButton" name="SetPoint_HomeButton">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>125</width>
-         <height>25</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">QPushButton{
-background-color: rgb(72,72,72);
-color: white;
-}</string>
-       </property>
-       <property name="text">
-        <string>Home</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="3">
-      <widget class="QPushButton" name="SetPoint_SaveViewButton">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>125</width>
-         <height>25</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(72,72,72);
-color: white;</string>
-       </property>
-       <property name="text">
-        <string>Save View</string>
        </property>
       </widget>
      </item>
@@ -190,16 +141,87 @@ color: white;</string>
          <height>25</height>
         </size>
        </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(72,72,72)</string>
-       </property>
        <property name="text">
         <string>Reset</string>
        </property>
       </widget>
      </item>
+     <item row="0" column="2">
+      <widget class="QPushButton" name="SetPoint_SideViewButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>125</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Side View</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="6">
+      <widget class="QPushButton" name="Manual_SwitchButton">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>125</width>
+         <height>25</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Switch</string>
+       </property>
+      </widget>
+     </item>
     </layout>
    </widget>
+   <widget class="QStackedWidget" name="stackedWidgetHead">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>80</y>
+      <width>900</width>
+      <height>675</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: lightgrey;</string>
+    </property>
+    <widget class="QCameraViewfinder" name="viewfinderHead"/>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidgetArm">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>80</y>
+      <width>180</width>
+      <height>135</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: darkgrey</string>
+    </property>
+    <widget class="QCameraViewfinder" name="viewfinderArm"/>
+   </widget>
+   <zorder>stackedWidgetHead</zorder>
+   <zorder>gridLayoutWidget</zorder>
+   <zorder>stackedWidgetArm</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
   </widget>
   <action name="actionMenu">
    <property name="text">
