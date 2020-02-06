@@ -14,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent)
     bool haveCameras = checkCameraAvailability();
     if (haveCameras)
     {
+        ui->statusBar->showMessage("Showing Head Camera",3500);
         const QList<QCameraInfo> availableCameras = QCameraInfo::availableCameras();
         QListIterator<QCameraInfo> i(availableCameras);
         QCamera* cameraHead = new QCamera(i.next());
@@ -47,10 +48,13 @@ void MainWindow::on_Manual_SwitchButton_clicked()
     //figure out which widget should be made larger or smaller
     QStackedWidget* makeLarger = ui->stackedWidgetHead;
     QStackedWidget* makeSmaller = ui->stackedWidgetArm;
+    ui->statusBar->showMessage("Showing Head Camera",3500);
+
     if (switchCounter%2 == 1)
     {
         makeLarger = ui->stackedWidgetArm;
         makeSmaller = ui->stackedWidgetHead;
+        ui->statusBar->showMessage("Showing Arm Camera",3500);
     }
 
     makeLarger->move(30,80);

@@ -10,11 +10,30 @@
     <height>780</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>960</width>
+    <height>780</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>960</width>
+    <height>780</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(40,40,40)</string>
+   <string notr="true">background-color: rgb(40,40,40);
+color: lightgrey;
+border-color: darkgrey;
+statusBar{
+background-color: grey;
+}
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QWidget" name="gridLayoutWidget">
@@ -22,7 +41,7 @@
      <rect>
       <x>30</x>
       <y>20</y>
-      <width>901</width>
+      <width>913</width>
       <height>41</height>
      </rect>
     </property>
@@ -193,6 +212,11 @@
    <zorder>stackedWidgetHead</zorder>
    <zorder>gridLayoutWidget</zorder>
    <zorder>stackedWidgetArm</zorder>
+  </widget>
+  <widget class="QStatusBar" name="statusBar">
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
   </widget>
   <action name="actionMenu">
    <property name="text">
