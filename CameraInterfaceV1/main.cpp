@@ -11,4 +11,6 @@ int main(int argc, char *argv[])
 }
 
 
-// TODO: save recorded info, fix int to float, fix ticks, update JA in views, changeable list order
+// TODO: save recorded info, fix int to float, add negative vlaues, fix ticks, changeable list order, cartesian and joint angles interact together
+
+//change integer with slider and then manually enter the decimal you want and if you want it to be negative

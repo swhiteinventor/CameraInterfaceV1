@@ -9,8 +9,21 @@ SaveEditView::SaveEditView(QWidget *parent) :
     ui->setupUi(this);
 
     QSlider *JA1_horizontalSlider = new QSlider(Qt::Horizontal);
-    JA1_horizontalSlider->setRange(0, 100.00000);
-    //JA1_horizontalSlider->setSingleStep(100.00000/1000.00000);
+    JA1_horizontalSlider->setRange(-1000.00000, 1000.00000);
+    //int ticks = 1;
+    //JA1_horizontalSlider->setTickInterval(ticks);
+    QSlider *JA2_horizontalSlider = new QSlider(Qt::Horizontal);
+    JA2_horizontalSlider->setRange(-1000.00000, 1000.00000);
+    QSlider *JA3_horizontalSlider = new QSlider(Qt::Horizontal);
+    JA3_horizontalSlider->setRange(-1000.00000, 1000.00000);
+    QSlider *JA4_horizontalSlider = new QSlider(Qt::Horizontal);
+    JA4_horizontalSlider->setRange(-1000.00000, 1000.00000);
+    QSlider *JA5_horizontalSlider = new QSlider(Qt::Horizontal);
+    JA5_horizontalSlider->setRange(-1000.00000, 1000.00000);
+    QSlider *JA6_horizontalSlider = new QSlider(Qt::Horizontal);
+    JA6_horizontalSlider->setRange(-1000.00000, 1000.00000);
+    QSlider *JA7_horizontalSlider = new QSlider(Qt::Horizontal);
+    JA7_horizontalSlider->setRange(-1000.00000, 1000.00000);
 
 }
 
@@ -332,45 +345,45 @@ void SaveEditView::on_JA1_horizontalSlider_valueChanged(int value)
     ui->JA1textEdit->setText(b);
 }
 
-void SaveEditView::on_JA2_horizontalSlider_valueChanged(int value)
+void SaveEditView::on_JA2_horizontalSlider_valueChanged(float value)
 {
-    float intValue = value;
-    QString b = QString::number(intValue);
+    float floatValue = value;
+    QString b = QString::number(floatValue);
     ui->JA2_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA3_horizontalSlider_valueChanged(int value)
+void SaveEditView::on_JA3_horizontalSlider_valueChanged(float value)
 {
-    float intValue = value;
-    QString b = QString::number(intValue);
+    float floatValue = value;
+    QString b = QString::number(floatValue);
     ui->JA3_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA4_horizontalSlider_valueChanged(int value)
+void SaveEditView::on_JA4_horizontalSlider_valueChanged(float value)
 {
-    float intValue = value;
-    QString b = QString::number(intValue);
+    float floatValue = value;
+    QString b = QString::number(floatValue);
     ui->JA4_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA5_horizontalSlider_valueChanged(int value)
+void SaveEditView::on_JA5_horizontalSlider_valueChanged(float value)
 {
-    float intValue = value;
-    QString b = QString::number(intValue);
+    float floatValue = value;
+    QString b = QString::number(floatValue);
     ui->JA5_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA6_horizontalSlider_valueChanged(int value)
+void SaveEditView::on_JA6_horizontalSlider_valueChanged(float value)
 {
-    float intValue = value;
-    QString b = QString::number(intValue);
+    float floatValue = value;
+    QString b = QString::number(floatValue);
     ui->JA6_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA7_horizontalSlider_valueChanged(int value)
+void SaveEditView::on_JA7_horizontalSlider_valueChanged(float value)
 {
-    float intValue = value;
-    QString b = QString::number(intValue);
+    float floatValue = value;
+    QString b = QString::number(floatValue);
     ui->JA7_textEdit->setText(b);
 }
 
@@ -379,22 +392,85 @@ void SaveEditView::on_saveNew_pushButton_clicked()
     if(SaveEditView::count == 1){
         QString nameNew = ui->editName_textEdit->toPlainText();
         ui->view1Name_label->setText(nameNew);
+
+        QString JA1New = ui->JA1textEdit->toPlainText();
+        QString JA2New = ui->JA2_textEdit->toPlainText();
+        QString JA3New = ui->JA3_textEdit->toPlainText();
+        QString JA4New = ui->JA4_textEdit->toPlainText();
+        QString JA5New = ui->JA5_textEdit->toPlainText();
+        QString JA6New = ui->JA6_textEdit->toPlainText();
+        QString JA7New = ui->JA7_textEdit->toPlainText();
+
+        QString s = JA1New + "," + JA2New +","+ JA3New + ","+ JA4New + ","+ JA5New + ","+ JA6New + ","+ JA7New;
+
+        ui->JA1_label->setText(s);
     }
     else if(SaveEditView::count == 2){
         QString nameNew = ui->editName_textEdit->toPlainText();
         ui->view2Name_label->setText(nameNew);
+
+        QString JA1New = ui->JA1textEdit->toPlainText();
+        QString JA2New = ui->JA2_textEdit->toPlainText();
+        QString JA3New = ui->JA3_textEdit->toPlainText();
+        QString JA4New = ui->JA4_textEdit->toPlainText();
+        QString JA5New = ui->JA5_textEdit->toPlainText();
+        QString JA6New = ui->JA6_textEdit->toPlainText();
+        QString JA7New = ui->JA7_textEdit->toPlainText();
+
+        QString s = JA1New + "," + JA2New +","+ JA3New + ","+ JA4New + ","+ JA5New + ","+ JA6New + ","+ JA7New;
+
+        ui->JA2_label->setText(s);
+
         }
     else if(SaveEditView::count == 3){
         QString nameNew = ui->editName_textEdit->toPlainText();
         ui->view3Name_label->setText(nameNew);
+
+        QString JA1New = ui->JA1textEdit->toPlainText();
+        QString JA2New = ui->JA2_textEdit->toPlainText();
+        QString JA3New = ui->JA3_textEdit->toPlainText();
+        QString JA4New = ui->JA4_textEdit->toPlainText();
+        QString JA5New = ui->JA5_textEdit->toPlainText();
+        QString JA6New = ui->JA6_textEdit->toPlainText();
+        QString JA7New = ui->JA7_textEdit->toPlainText();
+
+        QString s = JA1New + "," + JA2New +","+ JA3New + ","+ JA4New + ","+ JA5New + ","+ JA6New + ","+ JA7New;
+
+        ui->JA3_label->setText(s);
+
         }
     else if(SaveEditView::count == 4){
         QString nameNew = ui->editName_textEdit->toPlainText();
         ui->view4Name_label->setText(nameNew);
+
+        QString JA1New = ui->JA1textEdit->toPlainText();
+        QString JA2New = ui->JA2_textEdit->toPlainText();
+        QString JA3New = ui->JA3_textEdit->toPlainText();
+        QString JA4New = ui->JA4_textEdit->toPlainText();
+        QString JA5New = ui->JA5_textEdit->toPlainText();
+        QString JA6New = ui->JA6_textEdit->toPlainText();
+        QString JA7New = ui->JA7_textEdit->toPlainText();
+
+        QString s = JA1New + "," + JA2New +","+ JA3New + ","+ JA4New + ","+ JA5New + ","+ JA6New + ","+ JA7New;
+
+        ui->JA4_label->setText(s);
+
         }
     else if(SaveEditView::count == 5){
         QString nameNew = ui->editName_textEdit->toPlainText();
         ui->view5Name_label->setText(nameNew);
+
+        QString JA1New = ui->JA1textEdit->toPlainText();
+        QString JA2New = ui->JA2_textEdit->toPlainText();
+        QString JA3New = ui->JA3_textEdit->toPlainText();
+        QString JA4New = ui->JA4_textEdit->toPlainText();
+        QString JA5New = ui->JA5_textEdit->toPlainText();
+        QString JA6New = ui->JA6_textEdit->toPlainText();
+        QString JA7New = ui->JA7_textEdit->toPlainText();
+
+        QString s = JA1New + "," + JA2New +","+ JA3New + ","+ JA4New + ","+ JA5New + ","+ JA6New + ","+ JA7New;
+
+        ui->JA5_label->setText(s);
         }
 }
 
