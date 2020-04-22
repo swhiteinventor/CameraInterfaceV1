@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "saveeditview.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,6 +18,8 @@ public:
 
 private slots:
     void on_Manual_SwitchButton_clicked();
+
+    void on_SetPoint_SaveViewButton_clicked();
 
 private:
     Ui::MainWindow *ui;

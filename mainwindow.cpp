@@ -66,3 +66,10 @@ void MainWindow::on_Manual_SwitchButton_clicked()
     //increment the counter
     switchCounter ++;
 }
+
+void MainWindow::on_SetPoint_SaveViewButton_clicked()
+{
+    SaveEditView saveeditview;
+    saveeditview.setModal(true);
+    saveeditview.exec();
+}
