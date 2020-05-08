@@ -34,17 +34,17 @@ private slots:
 
     void on_JA1_horizontalSlider_valueChanged(int value);
 
-    void on_JA2_horizontalSlider_valueChanged(float value);
+    void on_JA2_horizontalSlider_valueChanged(int Value);
 
-    void on_JA3_horizontalSlider_valueChanged(float value);
+    void on_JA3_horizontalSlider_valueChanged(int Value);
 
-    void on_JA4_horizontalSlider_valueChanged(float value);
+    void on_JA4_horizontalSlider_valueChanged(int Value);
 
-    void on_JA5_horizontalSlider_valueChanged(float value);
+    void on_JA5_horizontalSlider_valueChanged(int Value);
 
-    void on_JA6_horizontalSlider_valueChanged(float value);
+    void on_JA6_horizontalSlider_valueChanged(int Value);
 
-    void on_JA7_horizontalSlider_valueChanged(float value);
+    void on_JA7_horizontalSlider_valueChanged(int Value);
 
     void on_saveNew_pushButton_clicked();
 

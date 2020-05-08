@@ -345,45 +345,45 @@ void SaveEditView::on_JA1_horizontalSlider_valueChanged(int value)
     ui->JA1textEdit->setText(b);
 }
 
-void SaveEditView::on_JA2_horizontalSlider_valueChanged(float value)
+void SaveEditView::on_JA2_horizontalSlider_valueChanged(int value)
 {
-    float floatValue = value;
-    QString b = QString::number(floatValue);
+    float intValue = value;
+    QString b = QString::number(intValue);
     ui->JA2_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA3_horizontalSlider_valueChanged(float value)
+void SaveEditView::on_JA3_horizontalSlider_valueChanged(int value)
 {
-    float floatValue = value;
-    QString b = QString::number(floatValue);
+    float intValue = value;
+    QString b = QString::number(intValue);
     ui->JA3_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA4_horizontalSlider_valueChanged(float value)
+void SaveEditView::on_JA4_horizontalSlider_valueChanged(int value)
 {
-    float floatValue = value;
-    QString b = QString::number(floatValue);
+    float intValue = value;
+    QString b = QString::number(intValue);
     ui->JA4_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA5_horizontalSlider_valueChanged(float value)
+void SaveEditView::on_JA5_horizontalSlider_valueChanged(int value)
 {
-    float floatValue = value;
-    QString b = QString::number(floatValue);
+    float intValue = value;
+    QString b = QString::number(intValue);
     ui->JA5_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA6_horizontalSlider_valueChanged(float value)
+void SaveEditView::on_JA6_horizontalSlider_valueChanged(int value)
 {
-    float floatValue = value;
-    QString b = QString::number(floatValue);
+    float intValue = value;
+    QString b = QString::number(intValue);
     ui->JA6_textEdit->setText(b);
 }
 
-void SaveEditView::on_JA7_horizontalSlider_valueChanged(float value)
+void SaveEditView::on_JA7_horizontalSlider_valueChanged(int value)
 {
-    float floatValue = value;
-    QString b = QString::number(floatValue);
+    float intValue = value;
+    QString b = QString::number(intValue);
     ui->JA7_textEdit->setText(b);
 }
 
