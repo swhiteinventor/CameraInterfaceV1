@@ -51,9 +51,9 @@ private slots:
 
     void on_Roll_dial_valueChanged(int value);
 
-    void on_Pitch_horizontalSlider_valueChanged(int value);
+    void on_Yaw_horizontalSlider_valueChanged(int value);
 
-    void on_Yaw_verticalSlider_valueChanged(int value);
+    void on_Pitch_verticalSlider_valueChanged(int value);
 
     void on_view1_pushButton_clicked();
 
@@ -130,6 +130,16 @@ private slots:
     void on_selectView_comboBox_activated(const QString &arg1);
 
     void on_ApplyAllChanges_pushButton_clicked();
+
+    void on_Speed_horizontalSlider_valueChanged(int value);
+
+    void on_ViewingDistance_horizontalSlider_valueChanged(int value);
+
+    void on_Elevation_horizontalSlider_valueChanged(int value);
+
+    void on_CameraRoll_horizontalSlider_valueChanged(int value);
+
+    void on_LookAtHand_horizontalSlider_valueChanged(int value);
 
 private:
     Ui::MainWindow *ui;
