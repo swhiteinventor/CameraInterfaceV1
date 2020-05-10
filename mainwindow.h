@@ -113,8 +113,6 @@ private slots:
 
     void on_New_verticalSlider_valueChanged(int value);
 
-    void on_pushButton_11_clicked();
-
     void on_SpeedUpdate_pushButton_clicked();
 
     void on_ViewingUpdate_pushButton_clicked();
@@ -129,9 +127,9 @@ private slots:
 
     void on_UpdateAllVars_pushButton_clicked();
 
-    //void on_selectView_comboBox_activated(const QString &arg1);
+    void on_selectView_comboBox_activated(const QString &arg1);
 
-    void on_StadndIn_pushButton_clicked();
+    void on_ApplyAllChanges_pushButton_clicked();
 
 private:
     Ui::MainWindow *ui;
